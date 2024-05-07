@@ -107,7 +107,30 @@
                 wheelSpinning = false;          // Reset to false to power buttons and spin can be clicked again.
             }
 
-            function play() {
-              var audio = document.getElementById("audio");
+            function play(number) {
+              var audio = document.getElementById(number);
               audio.play();
+            }
+
+            let run = false;
+
+
+
+            function play3() {
+              var audio = document.getElementById("losing");
+              audio.play();
+            }
+
+
+
+
+            function playRumble() {
+              var audio = document.getElementById("rumble");
+              if(run == false){
+              audio.play();
+              run = true;
+              } else {
+              audio.pause();
+              audio.currentTime = 0;
+              run = false;}
             }

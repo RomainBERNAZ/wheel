@@ -44,10 +44,10 @@
                         <div class="power_controls">
                             <img id="spin_button" src="spin_off.png" alt="Spin" onClick="startSpin();" />
                             <br /><br />
-                            <a href="#" onClick="resetWheel(); return false;">Reset</a><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="#" onClick="resetWheel(); return false;">Reset</a><br />
                         </div>
                     </td>
-                    <td width="438" height="800" class="the_wheel" align="center" valign="center">
+                    <td width="438" height="800" class="the_wheel" align="center">
                         <div class="tick">
                             <p id="result"></p>
                         </div>
@@ -55,16 +55,36 @@
                         <canvas id="canvas" width="600" height="600">
                             <p style="{color: white}" align="center">Sorry, your browser doesn't support canvas. Please try another.</p>
                         </canvas>
-
-                        <button class="sound" value="PLAY" onclick="play()">
-
+                    </td>
+                    <td class="button-list">
+                        <button class="button" role="button" value="PLAY" onclick="play(1)">
+                            <p>Ok let's go</p>
                         </button>
-                        <audio id="audio" src="sound/ok-lets-go-turbopoliep.mp3"></audio>
+                        <audio id="1" src="sound/ok-lets-go-turbopoliep.mp3"></audio>
 
+                        <button class="button" role="button" value="PLAY" onclick="play(2)">
+                            <p>Perdu</p>
+                        </button>
+                        <audio id="2" src="sound/losing.mp3"></audio>
+
+                        <button class="button" role="button" value="PLAY" onclick="play(3)">
+                            <p>Zizi</p>
+                        </button>
+                        <audio id="3" src="sound/zizi-fesse.mp3"></audio>
+
+                        <button class="button" role="button" value="PLAY" onclick="play(4)">
+                            <p>Correct !</p>
+                        </button>
+                        <audio id="4" src="sound/correct-answer.mp3"></audio>
+
+                        <button class="button" role="button" value="PLAY" onclick="playRumble()">
+                            <p>rumble</p>
+                        </button>
+                        <audio id="rumble" src="sound/Space%20jam-%20Lets%20get%20ready%20to%20rumble.mp3"></audio>
                     </td>
                 </tr>
             </table>
         </div>
-        <script src="/wheel.js"></script>
+        <script src="wheel.js"></script>
     </body>
 </html>
