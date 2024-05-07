@@ -23,12 +23,29 @@ td.the_wheel
     background-repeat: none;
 }
 
+.pointeuse {
+ display : inline-block;
+ height : 0;
+ width : 0;
+ border-top : 26px solid black;
+ border-right : 15px solid transparent;
+ border-left : 15px solid transparent;
+ margin-bottom : 10px;
+}
+
 .tick{
-height: 6rem;
+height: 3rem;
 width: 100%;
 color: black;
 font-size: 2rem;
 }
+
+.sound{
+height: 70px;
+width: 100px;
+background-color: red;
+}
+
 
 /* Do some css reset on selected elements */
 h1, p
