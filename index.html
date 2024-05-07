@@ -49,7 +49,7 @@
                     </td>
                     <td width="438" height="800" class="the_wheel" align="center" valign="center">
                         <div class="tick">
-
+                            <p id="result"></p>
                         </div>
                         <canvas id="canvas" width="600" height="600">
                             <p style="{color: white}" align="center">Sorry, your browser doesn't support canvas. Please try another.</p>
@@ -71,7 +71,7 @@
                    {'fillStyle' : '#89f26e', 'text' : 'Kevin'},
                    {'fillStyle' : '#7de6ef', 'text' : 'Roulette Grecque'},
                    {'fillStyle' : '#e7706f', 'text' : 'El pimentoooo'},
-                   {'fillStyle' : '#eae56f', 'text' : 'Prize 5'},
+                   {'fillStyle' : '#eae56f', 'text' : 'Les Kevin connus'},
                    {'fillStyle' : '#89f26e', 'text' : 'Tout le monde'},
                    {'fillStyle' : '#7de6ef', 'text' : 'Kevin'},
                    {'fillStyle' : '#e7706f', 'text' : 'Prize 8'},
@@ -81,7 +81,7 @@
                    {'fillStyle' : '#e7706f', 'text' : 'Prize 12'},
                    {'fillStyle' : '#eae56f', 'text' : 'Roulette Grecque'},
                    {'fillStyle' : '#89f26e', 'text' : 'EL pimentoooo'},
-                   {'fillStyle' : '#7de6ef', 'text' : 'Prize 15'},
+                   {'fillStyle' : '#7de6ef', 'text' : 'Autour du pr\u00e9nom Kevin'},
                    {'fillStyle' : '#e7706f', 'text' : 'Prize 16'},
                    {'fillStyle' : '#eae56f', 'text' : 'Tout le monde'},
                    {'fillStyle' : '#89f26e', 'text' : 'Kevin'},
@@ -127,7 +127,8 @@
             {
                 // Do basic alert of the segment text.
                 // You would probably want to do something more interesting with this information.
-                alert("You have won " + indicatedSegment.text);
+                console.log(indicatedSegment);
+                document.getElementById('result').innerHTML = indicatedSegment.text;
             }
 
             // =======================================================================================================================
@@ -166,6 +167,7 @@
             // -------------------------------------------------------
             function resetWheel()
             {
+                document.getElementById('result').innerHTML = '';
                 theWheel.stopAnimation(false);  // Stop the animation, false as param so does not call callback function.
                 theWheel.rotationAngle = 0;     // Re-set the wheel angle to 0 degrees.
                 theWheel.draw();                // Call draw to render changes to the wheel.
