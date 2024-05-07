@@ -43,6 +43,9 @@ font-size: 2rem;
 .button-list {
 display: flex;
 flex-direction: column;
+padding-left: 5rem;
+margin-left: 5rem;
+padding-top: 6rem;
 }
 
 /* CSS */

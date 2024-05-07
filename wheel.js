@@ -14,17 +14,17 @@
                    {'fillStyle' : '#89f26e', 'text' : 'Tout le monde'},
                    {'fillStyle' : '#7de6ef', 'text' : 'Kevin'},
                    {'fillStyle' : '#e7706f', 'text' : 'Anecdotes'},
-                   {'fillStyle' : '#eae56f', 'text' : 'Prize 9'},
+                   {'fillStyle' : '#eae56f', 'text' : 'Tous ensemble, sant\u00e9'},
                    {'fillStyle' : '#89f26e', 'text' : 'Tout le monde'},
                    {'fillStyle' : '#7de6ef', 'text' : 'Kevin'},
-                   {'fillStyle' : '#e7706f', 'text' : 'Prize 12'},
+                   {'fillStyle' : '#e7706f', 'text' : 'Blind test'},
                    {'fillStyle' : '#eae56f', 'text' : 'Roulette Grecque'},
                    {'fillStyle' : '#89f26e', 'text' : 'El pimentoooo'},
                    {'fillStyle' : '#7de6ef', 'text' : 'Autour du pr\u00e9nom Kevin'},
-                   {'fillStyle' : '#e7706f', 'text' : 'Prize 16'},
+                   {'fillStyle' : '#e7706f', 'text' : 'Un truc sale'},
                    {'fillStyle' : '#eae56f', 'text' : 'Tout le monde'},
                    {'fillStyle' : '#89f26e', 'text' : 'Kevin'},
-                   {'fillStyle' : '#7de6ef', 'text' : 'Prize 19'},
+                   {'fillStyle' : '#7de6ef', 'text' : 'Blind test'},
                    {'fillStyle' : '#e7706f', 'text' : 'Kevin d\u00e9cide de la r\u00e8gle'}
                 ],
                 'animation' :           // Specify the animation to use.
@@ -114,15 +114,10 @@
 
             let run = false;
 
-
-
             function play3() {
               var audio = document.getElementById("losing");
               audio.play();
             }
-
-
-
 
             function playRumble() {
               var audio = document.getElementById("rumble");
@@ -133,4 +128,30 @@
               audio.pause();
               audio.currentTime = 0;
               run = false;}
+            }
+
+            let run2 = false;
+
+            function playBlindTest() {
+              var audio = document.getElementById("blindtest");
+              if(run2 == false){
+              audio.play();
+              run2 = true;
+              } else {
+              audio.pause();
+              audio.currentTime = 0;
+              run2 = false;}
+            }
+
+            let run3 = false;
+
+            function playBlindTestFrench() {
+              var audio = document.getElementById("blindtestfrench");
+              if(run3 == false){
+              audio.play();
+              run3 = true;
+              } else {
+              audio.pause();
+              audio.currentTime = 0;
+              run3 = false;}
             }
